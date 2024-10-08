@@ -5,30 +5,50 @@
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
 # Ignore bundler config.
-/.bundle
+.bundle
 
 # Ignore all environment files.
-/.env*
-
+.env*
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+log/*
+tmp/*
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+# Ignore bundler config.
+# Ignore all environment files.
+.env*
+.env*.local
 
-# Ignore storage (uploaded files in development and any SQLite databases).
+# Ignore all SQLite databases
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-[0-9]*
+# Ignore coverage
+/coverage/
+# Ignore test files
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+/public/uploads
 
+# Ignore node_modules
+node_modules/
+
+# Ignore precompiled javascript packs
+/public/packs
+/public/packs-test
 /public/assets
 
+# Ignore yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+config/master.key
